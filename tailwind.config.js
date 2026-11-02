@@ -4,37 +4,39 @@ export default {
   theme: {
     extend: {
       colors: {
-        magenta: {
-          50: '#fdf2f6',
-          100: '#fbe4ed',
-          200: '#f4bdd6',
-          300: '#e889b2',
-          400: '#d84f8b',
-          500: '#b8256a',
-          600: '#941a54',
-          700: '#731347',
-          800: '#570f38',
-          900: '#3d0a28',
-          950: '#280619',
+        // Primary / envelope & footer background (deep vintage wine)
+        rosewood: {
+          DEFAULT: '#6B2A35',
+          dark: '#4E1E27',
+          light: '#87384A',
         },
-        gold: {
-          50: '#fdf9ec',
-          100: '#faf0c9',
-          200: '#f3dd8f',
-          300: '#ecc658',
-          400: '#e4ad33',
-          500: '#cf8f22',
-          600: '#a9701b',
-          700: '#86551a',
-          800: '#6e461c',
-          900: '#5e3c1d',
+        // Heading & CTA accents
+        brick: '#873644',
+        wine: {
+          DEFAULT: '#9B3D4E',
+          dark: '#7C2F3D',
         },
-        parchment: {
-          50: '#fffdf7',
-          100: '#fbf2de',
-          200: '#f5e5c0',
-          300: '#ecd6a0',
-          400: '#e0c07c',
+        // Text
+        charcoal: '#4A3E3D',
+        taupe: '#8C7E7D',
+        // Card / page background
+        ivory: {
+          DEFAULT: '#FAF7F2',
+          card: '#F9F5EF',
+        },
+        // Brushed champagne gold accents
+        champagne: {
+          400: '#D4AF37',
+          500: '#C5A059',
+        },
+        // Wax seal
+        pearl: '#ECE8E1',
+        // Scratch-card foil
+        terracotta: '#B85D65',
+        // Inputs / inactive cards
+        field: {
+          bg: '#F3EDE6',
+          border: '#E6DCD1',
         },
       },
       fontFamily: {

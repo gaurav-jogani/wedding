@@ -3,10 +3,9 @@
 @tailwind utilities;
 
 :root {
-  --magenta-950: #280619;
-  --magenta-900: #3d0a28;
-  --gold-400: #e4ad33;
-  --gold-300: #ecc658;
+  --rosewood: #6b2a35;
+  --champagne-400: #d4af37;
+  --champagne-500: #c5a059;
 }
 
 * {
@@ -19,65 +18,57 @@ html {
 
 body {
   margin: 0;
-  background: #1c0511;
-  color: #3d0a28;
+  background: #faf7f2;
+  color: #4a3e3d;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
 }
 
 ::selection {
-  background: #e4ad33;
-  color: #3d0a28;
+  background: #d4af37;
+  color: #4a3e3d;
 }
 
 ::-webkit-scrollbar {
   width: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: #280619;
+  background: #faf7f2;
 }
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #ecc658, #a9701b);
+  background: linear-gradient(180deg, #d4af37, #873644);
   border-radius: 10px;
 }
 
-/* Parchment paper texture, built entirely from CSS gradients (no external images) */
-.bg-parchment {
-  background-color: #fbf2de;
+/* Warm antique-linen card surface, built entirely from CSS gradients (no external images) */
+.bg-linen {
+  background-color: #faf7f2;
   background-image:
-    radial-gradient(circle at 15% 20%, rgba(224, 192, 124, 0.35) 0, transparent 45%),
-    radial-gradient(circle at 85% 15%, rgba(224, 192, 124, 0.3) 0, transparent 40%),
-    radial-gradient(circle at 75% 85%, rgba(205, 160, 90, 0.3) 0, transparent 45%),
-    radial-gradient(circle at 25% 90%, rgba(205, 160, 90, 0.25) 0, transparent 40%),
+    radial-gradient(circle at 15% 20%, rgba(197, 160, 89, 0.12) 0, transparent 45%),
+    radial-gradient(circle at 85% 15%, rgba(197, 160, 89, 0.1) 0, transparent 40%),
+    radial-gradient(circle at 75% 85%, rgba(139, 56, 74, 0.06) 0, transparent 45%),
     repeating-linear-gradient(
       45deg,
-      rgba(166, 124, 60, 0.035) 0px,
-      rgba(166, 124, 60, 0.035) 2px,
+      rgba(107, 42, 53, 0.02) 0px,
+      rgba(107, 42, 53, 0.02) 2px,
       transparent 2px,
       transparent 6px
     );
 }
 
-.bg-deep-magenta {
-  background: radial-gradient(circle at 50% 0%, #5a1536 0%, #3d0a28 45%, #280619 100%);
-}
-
-.bg-royal-velvet {
-  background:
-    radial-gradient(ellipse at 20% 0%, rgba(228, 173, 51, 0.12) 0%, transparent 55%),
-    radial-gradient(ellipse at 80% 100%, rgba(228, 173, 51, 0.1) 0%, transparent 55%),
-    linear-gradient(180deg, #280619 0%, #3d0a28 50%, #280619 100%);
+.bg-rosewood-deep {
+  background: radial-gradient(circle at 50% 0%, #87384a 0%, #6b2a35 45%, #4e1e27 100%);
 }
 
 .text-gold-gradient {
-  background: linear-gradient(90deg, #a9701b 0%, #f3dd8f 25%, #ecc658 50%, #f3dd8f 75%, #a9701b 100%);
+  background: linear-gradient(90deg, #873644 0%, #d4af37 25%, #c5a059 50%, #d4af37 75%, #873644 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 
 .shimmer-gold {
-  background: linear-gradient(110deg, #a9701b 20%, #f8e6ad 40%, #ecc658 50%, #f8e6ad 60%, #a9701b 80%);
+  background: linear-gradient(110deg, #873644 20%, #e9cf85 40%, #d4af37 50%, #e9cf85 60%, #873644 80%);
   background-size: 200% 100%;
   -webkit-background-clip: text;
   background-clip: text;
@@ -85,15 +76,9 @@ body {
   animation: shimmer 3.5s linear infinite;
 }
 
-.deckle-edge {
-  filter: drop-shadow(0 18px 40px rgba(61, 10, 40, 0.45));
-}
 
-.ornate-border {
-  border: 1px solid rgba(169, 112, 27, 0.6);
-  box-shadow:
-    inset 0 0 0 1px rgba(228, 173, 51, 0.35),
-    inset 0 0 30px rgba(228, 173, 51, 0.08);
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
 }
 
 @media (max-width: 480px) {

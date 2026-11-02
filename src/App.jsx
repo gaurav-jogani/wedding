@@ -6,6 +6,7 @@ import MusicToggle from './components/MusicToggle';
 import Hero from './components/Hero';
 import SaveTheDate from './components/SaveTheDate';
 import Countdown from './components/Countdown';
+import Gallery from './components/Gallery';
 import Timeline from './components/Timeline';
 import Venue from './components/Venue';
 import Wardrobe from './components/Wardrobe';
@@ -24,7 +25,7 @@ export default function App() {
   }, []);
 
   return (
-    <div className="relative min-h-screen bg-royal-velvet">
+    <div className="relative min-h-screen bg-ivory">
       <SvgDefs />
       <Envelope onOpened={() => setOpened(true)} onSealClick={() => music.play()} />
       <ParticleBurst active={burstActive} onComplete={() => setBurstActive(false)} />
@@ -35,6 +36,7 @@ export default function App() {
             <Hero />
             <SaveTheDate />
             <Countdown />
+            <Gallery />
             <Timeline />
             <Venue />
             <Wardrobe />

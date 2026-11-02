@@ -4,25 +4,25 @@ import { venue } from '../data/content';
 
 export default function Venue() {
   return (
-    <section className="relative px-4 py-16 sm:py-24 bg-royal-velvet text-center">
+    <section className="relative px-4 py-16 sm:py-24 bg-linen text-center">
       <div className="max-w-3xl mx-auto flex flex-col items-center gap-6">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="font-heading text-gold-200 tracking-[0.1em] text-base sm:text-xl leading-relaxed uppercase max-w-xl"
+          className="font-heading text-brick tracking-[0.1em] text-base sm:text-xl leading-relaxed uppercase max-w-xl"
         >
           Under the Jodhpur sky, surrounded by those we love most, we would be honoured to celebrate with
           you
         </motion.h2>
 
-        <div className="text-gold-400 w-48">
+        <div className="text-champagne-500 w-48">
           <FloralDivider />
         </div>
 
         <motion.div
-          className="w-full rounded-lg overflow-hidden ornate-border shadow-2xl"
+          className="w-full rounded-2xl overflow-hidden border border-champagne-500/35 shadow-[0_18px_40px_rgba(107,42,53,0.14)]"
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
@@ -37,18 +37,15 @@ export default function Venue() {
         </motion.div>
 
         <div className="text-center">
-          <h3 className="font-script text-3xl sm:text-4xl text-gold-200">{venue.name}</h3>
-          <p className="font-body text-gold-100/80 text-sm sm:text-base mt-1">{venue.city}</p>
+          <h3 className="font-script text-3xl sm:text-4xl text-brick">{venue.name}</h3>
+          <p className="font-body text-taupe text-sm sm:text-base mt-1">{venue.city}</p>
         </div>
 
         <motion.a
           href={venue.mapUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-2 inline-flex items-center gap-2 px-7 py-3 rounded-full font-heading tracking-[0.15em] text-xs sm:text-sm uppercase text-magenta-950 shadow-lg"
-          style={{
-            background: 'linear-gradient(90deg, #a9701b 0%, #f3dd8f 50%, #a9701b 100%)',
-          }}
+          className="mt-2 inline-flex items-center gap-2 px-7 py-3 rounded-full font-heading tracking-[0.15em] text-xs sm:text-sm uppercase text-black shadow-lg bg-wine"
           whileHover={{ scale: 1.04 }}
           whileTap={{ scale: 0.97 }}
         >

@@ -41,7 +41,7 @@ export default function WaxSeal({ monogram = 'G & R', className = 'w-24 h-24' })
           <path d={outerD} />
         </clipPath>
         <filter id={`${id}-emboss`} x="-30%" y="-30%" width="160%" height="160%">
-          <feDropShadow dx="0.5" dy="2" stdDeviation="1.8" floodColor="#4a1530" floodOpacity="0.6" />
+          <feDropShadow dx="0.5" dy="2" stdDeviation="1.8" floodColor="#4e1e27" floodOpacity="0.5" />
         </filter>
         <filter id={`${id}-grain`}>
           <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="4" />
@@ -55,8 +55,8 @@ export default function WaxSeal({ monogram = 'G & R', className = 'w-24 h-24' })
 
       {/* directional shadow pooling toward the lower-right, clipped to the seal's own irregular edge */}
       <g clipPath={`url(#${id}-clip)`}>
-        <ellipse cx="66" cy="68" rx="26" ry="22" fill="#4a1530" opacity="0.22" />
-        <ellipse cx="38" cy="32" rx="20" ry="16" fill="#fff8ef" opacity="0.28" />
+        <ellipse cx="66" cy="68" rx="26" ry="22" fill="#6b2a35" opacity="0.16" />
+        <ellipse cx="38" cy="32" rx="20" ry="16" fill="#fffdfa" opacity="0.35" />
         <rect
           x="0"
           y="0"
@@ -68,7 +68,7 @@ export default function WaxSeal({ monogram = 'G & R', className = 'w-24 h-24' })
         />
       </g>
 
-      <path d={innerD} fill="none" stroke="#fdf2ea" strokeOpacity="0.4" strokeWidth="0.6" />
+      <path d={innerD} fill="none" stroke="#fffdfa" strokeOpacity="0.5" strokeWidth="0.6" />
 
       <text
         x="50"
@@ -76,8 +76,8 @@ export default function WaxSeal({ monogram = 'G & R', className = 'w-24 h-24' })
         textAnchor="middle"
         fontFamily="'Great Vibes', cursive"
         fontSize="21"
-        fill="#5c1d3e"
-        opacity="0.45"
+        fill="#6b2a35"
+        opacity="0.35"
         transform="translate(0.5 0.7)"
       >
         {monogram}
@@ -88,7 +88,7 @@ export default function WaxSeal({ monogram = 'G & R', className = 'w-24 h-24' })
         textAnchor="middle"
         fontFamily="'Great Vibes', cursive"
         fontSize="21"
-        fill="#7a3253"
+        fill="#873644"
       >
         {monogram}
       </text>

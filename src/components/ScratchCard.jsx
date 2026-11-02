@@ -1,8 +1,40 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
+import { motion } from 'framer-motion';
 import { playChimeSound } from '../utils/sound';
 
 const REVEAL_THRESHOLD = 0.5;
 const SAMPLE_GRID = 14;
+const CONFETTI_COLORS = ['#d4af37', '#c5a059', '#ece8e1', '#b85d65'];
+
+function ConfettiBurst() {
+  const pieces = Array.from({ length: 14 }).map((_, i) => {
+    const angle = (i / 14) * Math.PI * 2 + Math.random() * 0.5;
+    const distance = 40 + Math.random() * 40;
+    return {
+      id: i,
+      x: Math.cos(angle) * distance,
+      y: Math.sin(angle) * distance - 10,
+      rotate: Math.random() * 360,
+      color: CONFETTI_COLORS[i % CONFETTI_COLORS.length],
+      delay: Math.random() * 0.1,
+    };
+  });
+
+  return (
+    <div className="absolute inset-0 pointer-events-none overflow-visible">
+      {pieces.map((p) => (
+        <motion.span
+          key={p.id}
+          className="absolute left-1/2 top-1/2 w-1.5 h-1.5 rounded-[1px]"
+          style={{ backgroundColor: p.color }}
+          initial={{ x: 0, y: 0, opacity: 1, rotate: 0 }}
+          animate={{ x: p.x, y: p.y + 50, opacity: 0, rotate: p.rotate }}
+          transition={{ duration: 1, delay: p.delay, ease: 'easeOut' }}
+        />
+      ))}
+    </div>
+  );
+}
 
 export default function ScratchCard({ reveal, label }) {
   const containerRef = useRef(null);
@@ -10,19 +42,20 @@ export default function ScratchCard({ reveal, label }) {
   const scratchingRef = useRef(false);
   const revealedRef = useRef(false);
   const [revealed, setRevealed] = useState(false);
+  const [burst, setBurst] = useState(false);
 
   const drawFoil = useCallback((ctx, w, h) => {
     const grad = ctx.createLinearGradient(0, 0, w, h);
-    grad.addColorStop(0, '#a9701b');
-    grad.addColorStop(0.3, '#f3dd8f');
-    grad.addColorStop(0.5, '#ecc658');
-    grad.addColorStop(0.7, '#f3dd8f');
-    grad.addColorStop(1, '#a9701b');
+    grad.addColorStop(0, '#9c4a52');
+    grad.addColorStop(0.3, '#c97079');
+    grad.addColorStop(0.5, '#b85d65');
+    grad.addColorStop(0.7, '#c97079');
+    grad.addColorStop(1, '#9c4a52');
     ctx.fillStyle = grad;
     ctx.fillRect(0, 0, w, h);
 
-    ctx.globalAlpha = 0.18;
-    ctx.strokeStyle = '#fff6da';
+    ctx.globalAlpha = 0.16;
+    ctx.strokeStyle = '#f3e6c8';
     for (let i = -h; i < w; i += 7) {
       ctx.beginPath();
       ctx.moveTo(i, h);
@@ -31,7 +64,7 @@ export default function ScratchCard({ reveal, label }) {
     }
     ctx.globalAlpha = 1;
 
-    ctx.fillStyle = 'rgba(61, 10, 40, 0.55)';
+    ctx.fillStyle = 'rgba(250, 247, 242, 0.85)';
     ctx.font = `600 ${Math.max(11, w * 0.11)}px "Cinzel", serif`;
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
@@ -94,6 +127,8 @@ export default function ScratchCard({ reveal, label }) {
       revealedRef.current = true;
       playChimeSound();
       setRevealed(true);
+      setBurst(true);
+      setTimeout(() => setBurst(false), 1100);
       const rectFull = canvas.getBoundingClientRect();
       ctx.clearRect(0, 0, rectFull.width, rectFull.height);
     }
@@ -126,11 +161,9 @@ export default function ScratchCard({ reveal, label }) {
       className="relative w-28 h-36 sm:w-36 sm:h-44 select-none"
       style={{ clipPath: 'url(#heartClip)' }}
     >
-      <div className="absolute inset-0 flex flex-col items-center justify-center bg-magenta-50 border-2 border-gold-500/60">
-        <span className="font-display text-magenta-800 text-2xl sm:text-3xl tracking-wider">
-          {reveal}
-        </span>
-        <span className="mt-1 font-heading text-[9px] sm:text-[10px] tracking-[0.2em] text-magenta-600 uppercase">
+      <div className="absolute inset-0 flex flex-col items-center justify-center bg-field-bg border-2 border-champagne-500/60">
+        <span className="font-display text-brick text-2xl sm:text-3xl tracking-wider">{reveal}</span>
+        <span className="mt-1 font-heading text-[9px] sm:text-[10px] tracking-[0.2em] text-wine uppercase">
           {label}
         </span>
       </div>
@@ -147,6 +180,7 @@ export default function ScratchCard({ reveal, label }) {
           onTouchEnd={handleUp}
         />
       )}
+      {burst && <ConfettiBurst />}
     </div>
   );
 }

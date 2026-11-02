@@ -8,6 +8,12 @@ export const couple = {
     parents: 'D/O Mr. Alok & Mrs. Neeru Mehta',
   },
   monogram: 'G & R',
+  families: 'Jogani & Mehta',
+};
+
+export const blessing = {
+  shloka: 'वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ। निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा॥',
+  copy: 'With the blessings of the Almighty & our respected elders, we joyfully invite your gracious presence on the wedding celebration of',
 };
 
 export const weddingDate = new Date('2026-12-17T11:00:00+05:30');
@@ -71,11 +77,29 @@ export const wardrobe = [
   {
     occasion: 'Sangeet',
     style: 'Glitz & Glam / Indo-Western',
-    palette: ['#941a54', '#d84f8b', '#cf8f22', '#3d0a28'],
+    palette: ['#9B3D4E', '#D4AF37', '#B85D65', '#4A3E3D'],
   },
   {
     occasion: 'Wedding',
     style: 'Royal Traditional',
-    palette: ['#731347', '#a9701b', '#ecc658', '#570f38'],
+    palette: ['#6B2A35', '#873644', '#D4AF37', '#ECE8E1'],
   },
 ];
+
+/** Placeholder-friendly gallery slots — drop real photos at the paths below (see public/images/gallery/README.txt). */
+export const gallery = [
+  { id: 1, src: '/images/gallery/1.jpg', alt: `${couple.groom.name} & ${couple.bride.name}` },
+  { id: 2, src: '/images/gallery/2.jpg', alt: `${couple.groom.name} & ${couple.bride.name}` },
+  { id: 3, src: '/images/gallery/3.jpg', alt: `${couple.groom.name} & ${couple.bride.name}` },
+  { id: 4, src: '/images/gallery/4.jpg', alt: `${couple.groom.name} & ${couple.bride.name}` },
+];
+
+export const emotionalPoll = {
+  question: 'Who is getting emotional first?',
+  options: [couple.groom.name, couple.bride.name, 'Both'],
+};
+
+export const moodPoll = {
+  question: "I'm coming for...",
+  options: ['The Food 🍲', 'Dance Floor 💃', 'The Love ❤️', 'All of It ✨'],
+};
