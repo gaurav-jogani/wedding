@@ -18,13 +18,15 @@ function GalleryPhoto({ src, alt }) {
   }
 
   return (
-    <img
-      src={src}
-      alt={alt}
-      loading="lazy"
-      className="w-full aspect-[4/5] object-cover"
-      onError={() => setBroken(true)}
-    />
+    <div className="w-full aspect-[4/5] bg-field-bg">
+      <img
+        src={src}
+        alt={alt}
+        loading="lazy"
+        className="w-full h-full object-contain"
+        onError={() => setBroken(true)}
+      />
+    </div>
   );
 }
 

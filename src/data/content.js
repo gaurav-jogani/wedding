@@ -92,6 +92,7 @@ export const gallery = [
   { id: 2, src: '/images/gallery/2.jpg', alt: `${couple.groom.name} & ${couple.bride.name}` },
   { id: 3, src: '/images/gallery/3.jpg', alt: `${couple.groom.name} & ${couple.bride.name}` },
   { id: 4, src: '/images/gallery/4.jpg', alt: `${couple.groom.name} & ${couple.bride.name}` },
+  { id: 5, src: '/images/gallery/5.jpg', alt: `${couple.groom.name} & ${couple.bride.name}` },
 ];
 
 export const emotionalPoll = {
