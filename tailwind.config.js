@@ -4,25 +4,25 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Primary / envelope & footer background (deep vintage wine)
+        // Primary / envelope & footer background (muted sage green — "Sage Bloom" theme)
         rosewood: {
-          DEFAULT: '#6B2A35',
-          dark: '#4E1E27',
-          light: '#87384A',
+          DEFAULT: '#6E7D5E',
+          dark: '#3F4A34',
+          light: '#9AA38B',
         },
-        // Heading & CTA accents
-        brick: '#873644',
+        // Heading & CTA accents (dusty bloom-pink)
+        brick: '#9C5468',
         wine: {
-          DEFAULT: '#9B3D4E',
-          dark: '#7C2F3D',
+          DEFAULT: '#A85C72',
+          dark: '#7A3F50',
         },
         // Text
-        charcoal: '#4A3E3D',
-        taupe: '#8C7E7D',
-        // Card / page background
+        charcoal: '#3E3B33',
+        taupe: '#7C8370',
+        // Card / page background (soft parchment cream)
         ivory: {
-          DEFAULT: '#FAF7F2',
-          card: '#F9F5EF',
+          DEFAULT: '#FBF6EA',
+          card: '#FAF2DE',
         },
         // Brushed champagne gold accents
         champagne: {
@@ -30,13 +30,13 @@ export default {
           500: '#C5A059',
         },
         // Wax seal
-        pearl: '#ECE8E1',
+        pearl: '#EDEADF',
         // Scratch-card foil
-        terracotta: '#B85D65',
+        terracotta: '#C17B86',
         // Inputs / inactive cards
         field: {
-          bg: '#F3EDE6',
-          border: '#E6DCD1',
+          bg: '#F1EEE2',
+          border: '#DCE0D1',
         },
       },
       fontFamily: {

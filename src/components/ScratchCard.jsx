@@ -4,7 +4,7 @@ import { playChimeSound } from '../utils/sound';
 
 const REVEAL_THRESHOLD = 0.5;
 const SAMPLE_GRID = 14;
-const CONFETTI_COLORS = ['#d4af37', '#c5a059', '#ece8e1', '#b85d65'];
+const CONFETTI_COLORS = ['#d4af37', '#c5a059', '#edeadf', '#c17b86'];
 
 function ConfettiBurst() {
   const pieces = Array.from({ length: 14 }).map((_, i) => {
@@ -46,16 +46,16 @@ export default function ScratchCard({ reveal, label }) {
 
   const drawFoil = useCallback((ctx, w, h) => {
     const grad = ctx.createLinearGradient(0, 0, w, h);
-    grad.addColorStop(0, '#9c4a52');
-    grad.addColorStop(0.3, '#c97079');
-    grad.addColorStop(0.5, '#b85d65');
-    grad.addColorStop(0.7, '#c97079');
-    grad.addColorStop(1, '#9c4a52');
+    grad.addColorStop(0, '#7c8a6d');
+    grad.addColorStop(0.3, '#9aa38b');
+    grad.addColorStop(0.5, '#c17b86');
+    grad.addColorStop(0.7, '#9aa38b');
+    grad.addColorStop(1, '#7c8a6d');
     ctx.fillStyle = grad;
     ctx.fillRect(0, 0, w, h);
 
     ctx.globalAlpha = 0.16;
-    ctx.strokeStyle = '#f3e6c8';
+    ctx.strokeStyle = '#f5f0de';
     for (let i = -h; i < w; i += 7) {
       ctx.beginPath();
       ctx.moveTo(i, h);

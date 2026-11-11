@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 
 const GOLD_COLORS = ['#f0dca0', '#d4af37', '#c5a059', '#fff6da'];
-const PETAL_COLORS = ['#b85d65', '#9b3d4e', '#873644', '#ece8e1'];
+const PETAL_COLORS = ['#d99baa', '#c17b86', '#9c5468', '#edeadf'];
 
 function makeParticle(cx, cy) {
   const isPetal = Math.random() < 0.35;

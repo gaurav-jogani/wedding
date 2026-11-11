@@ -18,18 +18,18 @@ export default function Footer() {
           <FloralDivider />
         </div>
 
-        <h2 className="font-script text-4xl sm:text-5xl text-[#f3e6c8] mt-2">
+        <h2 className="font-script text-4xl sm:text-5xl text-[#f5f0de] mt-2">
           {couple.groom.name} &amp; {couple.bride.name}
         </h2>
 
-        <p className="font-body text-[#f3e6c8]/90 text-base sm:text-lg leading-relaxed mt-2">
+        <p className="font-body text-[#f5f0de]/90 text-base sm:text-lg leading-relaxed mt-2">
           We can't wait to celebrate with you. Your presence will make our day all the more special.
         </p>
-        <p className="font-script text-2xl sm:text-3xl text-[#f3e6c8]">With Love &amp; Warmest Wishes</p>
-        <p className="font-heading tracking-[0.2em] text-[#f3e6c8] text-xs sm:text-sm uppercase">
+        <p className="font-script text-2xl sm:text-3xl text-[#f5f0de]">With Love &amp; Warmest Wishes</p>
+        <p className="font-heading tracking-[0.2em] text-[#f5f0de] text-xs sm:text-sm uppercase">
           The {couple.families} Families
         </p>
-        <p className="font-heading text-[#f3e6c8]/40 text-[10px] tracking-[0.2em] uppercase mt-8">
+        <p className="font-heading text-[#f5f0de]/40 text-[10px] tracking-[0.2em] uppercase mt-8">
           17 &ndash; 18 December 2026 &middot; Jodhpur, Rajasthan
         </p>
       </motion.div>

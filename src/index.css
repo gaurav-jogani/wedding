@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --rosewood: #6b2a35;
+  --rosewood: #6e7d5e;
   --champagne-400: #d4af37;
   --champagne-500: #c5a059;
 }
@@ -18,57 +18,57 @@ html {
 
 body {
   margin: 0;
-  background: #faf7f2;
-  color: #4a3e3d;
+  background: #fbf6ea;
+  color: #3e3b33;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
 }
 
 ::selection {
   background: #d4af37;
-  color: #4a3e3d;
+  color: #3e3b33;
 }
 
 ::-webkit-scrollbar {
   width: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: #faf7f2;
+  background: #fbf6ea;
 }
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #d4af37, #873644);
+  background: linear-gradient(180deg, #d4af37, #9c5468);
   border-radius: 10px;
 }
 
-/* Warm antique-linen card surface, built entirely from CSS gradients (no external images) */
+/* Warm parchment-cream card surface, built entirely from CSS gradients (no external images) */
 .bg-linen {
-  background-color: #faf7f2;
+  background-color: #fbf6ea;
   background-image:
     radial-gradient(circle at 15% 20%, rgba(197, 160, 89, 0.12) 0, transparent 45%),
-    radial-gradient(circle at 85% 15%, rgba(197, 160, 89, 0.1) 0, transparent 40%),
-    radial-gradient(circle at 75% 85%, rgba(139, 56, 74, 0.06) 0, transparent 45%),
+    radial-gradient(circle at 85% 15%, rgba(154, 163, 139, 0.12) 0, transparent 40%),
+    radial-gradient(circle at 75% 85%, rgba(156, 84, 104, 0.06) 0, transparent 45%),
     repeating-linear-gradient(
       45deg,
-      rgba(107, 42, 53, 0.02) 0px,
-      rgba(107, 42, 53, 0.02) 2px,
+      rgba(110, 125, 94, 0.025) 0px,
+      rgba(110, 125, 94, 0.025) 2px,
       transparent 2px,
       transparent 6px
     );
 }
 
 .bg-rosewood-deep {
-  background: radial-gradient(circle at 50% 0%, #87384a 0%, #6b2a35 45%, #4e1e27 100%);
+  background: radial-gradient(circle at 50% 0%, #9aa38b 0%, #6e7d5e 45%, #3f4a34 100%);
 }
 
 .text-gold-gradient {
-  background: linear-gradient(90deg, #873644 0%, #d4af37 25%, #c5a059 50%, #d4af37 75%, #873644 100%);
+  background: linear-gradient(90deg, #9c5468 0%, #d4af37 25%, #c5a059 50%, #d4af37 75%, #9c5468 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 
 .shimmer-gold {
-  background: linear-gradient(110deg, #873644 20%, #e9cf85 40%, #d4af37 50%, #e9cf85 60%, #873644 80%);
+  background: linear-gradient(110deg, #9c5468 20%, #e9cf85 40%, #d4af37 50%, #e9cf85 60%, #9c5468 80%);
   background-size: 200% 100%;
   -webkit-background-clip: text;
   background-clip: text;

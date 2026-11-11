@@ -9,6 +9,7 @@ export const couple = {
   },
   monogram: 'G & R',
   families: 'Jogani & Mehta',
+  hashtag: 'stayJollywithGaurav',
 };
 
 export const blessing = {

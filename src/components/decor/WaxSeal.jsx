@@ -41,7 +41,7 @@ export default function WaxSeal({ monogram = 'G & R', className = 'w-24 h-24' })
           <path d={outerD} />
         </clipPath>
         <filter id={`${id}-emboss`} x="-30%" y="-30%" width="160%" height="160%">
-          <feDropShadow dx="0.5" dy="2" stdDeviation="1.8" floodColor="#4e1e27" floodOpacity="0.5" />
+          <feDropShadow dx="0.5" dy="2" stdDeviation="1.8" floodColor="#3f4a34" floodOpacity="0.5" />
         </filter>
         <filter id={`${id}-grain`}>
           <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="4" />
@@ -55,7 +55,7 @@ export default function WaxSeal({ monogram = 'G & R', className = 'w-24 h-24' })
 
       {/* directional shadow pooling toward the lower-right, clipped to the seal's own irregular edge */}
       <g clipPath={`url(#${id}-clip)`}>
-        <ellipse cx="66" cy="68" rx="26" ry="22" fill="#6b2a35" opacity="0.16" />
+        <ellipse cx="66" cy="68" rx="26" ry="22" fill="#3f4a34" opacity="0.16" />
         <ellipse cx="38" cy="32" rx="20" ry="16" fill="#fffdfa" opacity="0.35" />
         <rect
           x="0"
@@ -76,7 +76,7 @@ export default function WaxSeal({ monogram = 'G & R', className = 'w-24 h-24' })
         textAnchor="middle"
         fontFamily="'Great Vibes', cursive"
         fontSize="21"
-        fill="#6b2a35"
+        fill="#3f4a34"
         opacity="0.35"
         transform="translate(0.5 0.7)"
       >
@@ -88,7 +88,7 @@ export default function WaxSeal({ monogram = 'G & R', className = 'w-24 h-24' })
         textAnchor="middle"
         fontFamily="'Great Vibes', cursive"
         fontSize="21"
-        fill="#873644"
+        fill="#9c5468"
       >
         {monogram}
       </text>

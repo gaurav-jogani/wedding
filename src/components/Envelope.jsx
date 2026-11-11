@@ -7,7 +7,7 @@ import GrainOverlay from './decor/GrainOverlay';
 import { couple } from '../data/content';
 
 const TOP_CLIP = 'polygon(0% 0%, 100% 0%, 50% 50%)';
-const ENVELOPE_BG = 'linear-gradient(150deg, #87384A 0%, #6B2A35 45%, #58212B 78%, #4E1E27 100%)';
+const ENVELOPE_BG = 'linear-gradient(150deg, #9AA38B 0%, #7C8A6D 45%, #5C6B4E 78%, #3F4A34 100%)';
 
 export default function Envelope({ onOpened, onSealClick }) {
   const [phase, setPhase] = useState('closed'); // closed -> opening -> hidden
@@ -50,8 +50,8 @@ export default function Envelope({ onOpened, onSealClick }) {
             className="absolute inset-0 w-full h-full pointer-events-none"
             aria-hidden="true"
           >
-            <line x1="0" y1="0" x2="100" y2="100" stroke="#fdf2ea" strokeOpacity="0.55" strokeWidth="0.25" />
-            <line x1="100" y1="0" x2="0" y2="100" stroke="#fdf2ea" strokeOpacity="0.55" strokeWidth="0.25" />
+            <line x1="0" y1="0" x2="100" y2="100" stroke="#f5f0de" strokeOpacity="0.55" strokeWidth="0.25" />
+            <line x1="100" y1="0" x2="0" y2="100" stroke="#f5f0de" strokeOpacity="0.55" strokeWidth="0.25" />
           </svg>
 
           {/* top flap (opens on click), covers the upper sprays/seams until tapped.
@@ -86,7 +86,7 @@ export default function Envelope({ onOpened, onSealClick }) {
             <AnimatePresence>
               {phase === 'closed' && (
                 <motion.p
-                  className="font-script text-[#f3e6c8] text-4xl sm:text-5xl"
+                  className="font-script text-[#f5f0de] text-4xl sm:text-5xl"
                   exit={{ opacity: 0, y: -6 }}
                 >
                   Tap to Reveal
@@ -119,7 +119,7 @@ export default function Envelope({ onOpened, onSealClick }) {
             <AnimatePresence>
               {phase === 'closed' && (
                 <motion.p
-                  className="font-body italic text-[#f3e6c8]/90 text-sm sm:text-base leading-relaxed animate-pulseSoft"
+                  className="font-body italic text-[#f5f0de]/90 text-sm sm:text-base leading-relaxed animate-pulseSoft"
                   exit={{ opacity: 0, y: -6 }}
                 >
                   The {couple.families} families invite you to celebrate the wedding of {couple.groom.name} &amp; {couple.bride.name}
